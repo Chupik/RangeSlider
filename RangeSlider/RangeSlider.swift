@@ -86,7 +86,7 @@ class RangeSliderThumbLayer: CALayer {
 
 @IBDesignable
 public class RangeSlider: UIControl {
-    @IBInspectable public var minimumValue: Double = 0.0 {
+    @IBInspectable public var minimumValue: Double = 18.0 {
         willSet(newValue) {
             assert(newValue < maximumValue, "RangeSlider: minimumValue should be lower than maximumValue")
         }
@@ -95,7 +95,7 @@ public class RangeSlider: UIControl {
         }
     }
     
-    @IBInspectable public var maximumValue: Double = 1.0 {
+    @IBInspectable public var maximumValue: Double = 100.0 {
         willSet(newValue) {
             assert(newValue > minimumValue, "RangeSlider: maximumValue should be greater than minimumValue")
         }
@@ -104,7 +104,7 @@ public class RangeSlider: UIControl {
         }
     }
     
-    @IBInspectable public var lowerValue: Double = 0.2 {
+    @IBInspectable public var lowerValue: Double = 18.0 {
         didSet {
             if lowerValue < minimumValue {
                 lowerValue = minimumValue
@@ -113,7 +113,7 @@ public class RangeSlider: UIControl {
         }
     }
     
-    @IBInspectable public var upperValue: Double = 0.8 {
+    @IBInspectable public var upperValue: Double = 100.0 {
         didSet {
             if upperValue > maximumValue {
                 upperValue = maximumValue
